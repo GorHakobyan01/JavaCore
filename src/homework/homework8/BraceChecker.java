@@ -24,12 +24,12 @@ package homework.homework8;
 					case ']':
 					case ')':
 						if (stck.gerSize() == -1) {
-							System.err.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
+							System.out.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
 							inncorrect = false;
 						} else {
 							tmp = (char) stck.pop();
 							if (tmp != '(' && text.charAt(size) == ')' || tmp != '[' && text.charAt(size) == ']' || tmp != '{' && text.charAt(size) == '}') {
-								System.err.println("Error: opened " + tmp + " but closed " + text.charAt(size) + " " + (size + 1));
+								System.out.println("Error: opened " + tmp + " but closed " + text.charAt(size) + " " + (size + 1));
 								inncorrect = false;
 							}
 						}
@@ -37,7 +37,7 @@ package homework.homework8;
 				}
 			}
 			for (int i = stck.gerSize(); i >= 0; i--) {
-				System.err.println("Error: " + (char) stck.pop() + " " + "opened but dont closed");
+				System.out.println("Error: " + (char) stck.pop() + " " + "opened but dont closed");
 				inncorrect = false;
 
 			}
