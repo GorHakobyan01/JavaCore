@@ -23,7 +23,7 @@ package homework.homework8;
 					case '}':
 					case ']':
 					case ')':
-						if (stck.gerSize() == -1) {
+						if (stck.getSize() == -1) {
 							System.out.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
 							inncorrect = false;
 						} else {
@@ -36,7 +36,7 @@ package homework.homework8;
 						break;
 				}
 			}
-			for (int i = stck.gerSize(); i >= 0; i--) {
+			for (int i = stck.getSize(); i >= 0; i--) {
 				System.out.println("Error: " + (char) stck.pop() + " " + "opened but dont closed");
 				inncorrect = false;
 
